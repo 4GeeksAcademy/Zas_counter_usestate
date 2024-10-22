@@ -1,12 +1,54 @@
+body {
+  background-color: black;
+}
 
-/* 
+.wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(black, rgb(115, 115, 115));
+  text-align: center;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.titulo{
+  color: aliceblue;
+  font-size: 30px;
+  font-family:'Times New Roman', Times, serif;
+}
 
-*/
+
+.chronos {
+  display: flex;
+  font-size: 50px;
+  font-family:monospace;
+  background: linear-gradient(rgb(188, 188, 188), rgb(255, 255, 255),rgb(255, 255, 255), rgb(163, 163, 163));
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding-inline: 20px;
+  box-shadow: 0px 7px 20px 1px;
+  margin: 30px;
+}
+
+
+
+.reset {
+  background-color: rgb(162, 162, 162);
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  margin-left: 10px;
+  
+}
+.reset:active{
+  background-color: rgb(2, 0, 0);
+}
+
+.stop {
+  background-color: rgb(11, 139, 65);
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  
+}
+.stop:active{
+  background-color: rgb(10, 47, 22);
+}
