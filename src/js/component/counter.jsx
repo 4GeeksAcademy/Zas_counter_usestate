@@ -15,7 +15,7 @@ function Counter() {
     if (playPause == false) {
       const newIntervalID= setInterval(() => {
         setCentesimas((centesimas) => {
-          if (centesimas == 100) {
+          if (centesimas == 99) {
             setCentesimas(0);
             setSegundos((segundos) => {
               if (segundos == 60) {
@@ -38,11 +38,11 @@ function Counter() {
       setIntervalID(null);
     }
     setPlayPause(playPause ==false)
-
-    
-
-    
   }
+
+    
+
+    
   const contador = () => play()
   const clickonreset = ()=> {
     clearInterval(intervalID)
@@ -64,7 +64,11 @@ function Counter() {
           <p className="titulo">CHRONOS</p>
 
           <p className="chronos">
-            {formatTime(minutos)}:{formatTime(segundos)}.{formatTime(centesimas)}
+            <div>{formatTime(minutos)}</div>
+           <div>:</div>
+            <div>{formatTime(segundos)}</div>
+            <div>.</div>
+            <div>{formatTime(centesimas)}</div>
           </p>
 
           <button onClick={play} className="stop"

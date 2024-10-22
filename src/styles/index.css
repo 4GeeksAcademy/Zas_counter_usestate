@@ -11,18 +11,25 @@ body {
   text-align: center;
 }
 
-.titulo{
-  color: aliceblue;
-  font-size: 30px;
-  font-family:'Times New Roman', Times, serif;
+.titulo {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to right, rgba(139, 79, 79, 0), black, rgba(0, 0, 0, 0));
+  width: 200;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
 }
-
 
 .chronos {
   display: flex;
   font-size: 50px;
-  font-family:monospace;
-  background: linear-gradient(rgb(188, 188, 188), rgb(255, 255, 255),rgb(255, 255, 255), rgb(163, 163, 163));
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    rgb(188, 188, 188),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(163, 163, 163)
+  );
   color: rgb(0, 0, 0);
   border-radius: 10px;
   padding-inline: 20px;
@@ -30,16 +37,13 @@ body {
   margin: 30px;
 }
 
-
-
 .reset {
   background-color: rgb(162, 162, 162);
   color: rgb(255, 255, 255);
   border-radius: 6px;
   margin-left: 10px;
-  
 }
-.reset:active{
+.reset:active {
   background-color: rgb(2, 0, 0);
 }
 
@@ -47,8 +51,7 @@ body {
   background-color: rgb(11, 139, 65);
   color: rgb(255, 255, 255);
   border-radius: 6px;
-  
 }
-.stop:active{
+.stop:active {
   background-color: rgb(10, 47, 22);
 }
