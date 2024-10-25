@@ -112,7 +112,12 @@ function Counter() {
     console.log(minuts, seconds);
 
     if (minuts > 59 || seconds > 59) {
-      Swal.fire("Los minutos y segundos no pueden ser mayores que 59.");
+      Swal.fire({
+        title :"Los minutos y segundos no pueden ser mayores que 59.",
+        confirmButtonColor: "grey",
+                  background: "red",
+                  color: "white"
+      });
       return;
     }
 
@@ -179,6 +184,7 @@ function Counter() {
               className="setCountStart rounded"
               placeholder="mm/ss"
               maxLength="5" // Limitar a 5 caracteres
+              minLength={"4"} // minimo 4 caracteres
             />
 
             <button
