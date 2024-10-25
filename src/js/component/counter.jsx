@@ -11,22 +11,22 @@ function Counter() {
   const [inputTime, setInputTime] = useState("");
 
   const formatTime = (value) => {
-   
+
     return value < 10 ? `0${value}` : value;
-    }
-  
+  }
+
 
   function play(countDown) {
     console.log(countDown);
-    
+
     if (countDown == false) {
       if (playPause == false) {
         const newIntervalID = setInterval(() => {
           setCentesimas((centesimas) => {
-            if (centesimas == 99) {
+            if (centesimas === 99) {
               setCentesimas(0);
               setSegundos((segundos) => {
-                if (segundos == 59) {
+                if (segundos === 59) {
                   setSegundos(0);
                   setMinutos((minutos) => minutos + 1);
                 }
@@ -49,33 +49,38 @@ function Counter() {
       return;
     }
 
-// cuenta atras
+    // cuenta atras
 
     if (playPause == false) {
       const newIntervalID = setInterval(() => {
-         
+
         setCentesimas((centesimas) => {
-          if (centesimas == 0) {
+          if (centesimas === 0) {
             setCentesimas(99);
             setSegundos((segundos) => {
-              if (segundos == 0) {
+              if (segundos === 0) {
                 setSegundos(59);
                 setMinutos((minutos) => minutos - 1);
               }
-              if(minutos=== 0 && segundos=== 0 && centesimas=== 0){
-                Swal.fire("Cuenta atrás finalizada!");
-                clickonreset()
+              if (minutos == 0 && segundos === 0 && centesimas === 0) {
+                Swal.fire({
+                  title: "Cuenta atrás finalizada!",
+                  confirmButtonColor: "grey",
+                  background: "red",
+                  color: "white"
+                });
+                // clickonreset()
                 setCountDown(false)
                 clearInterval(newIntervalID)
-                return 
+                return
               }
               return segundos - 1;
             });
           }
-          
+
           return centesimas - 1;
         });
-       
+
       }, 10);
 
       setIntervalID(newIntervalID);
@@ -97,12 +102,12 @@ function Counter() {
     setCountDown(false)
   };
 
-  
+
 
   function onSubmit(event) {
     event.preventDefault();
-    
-    const minuts = Number(inputTime.slice(0,2))
+
+    const minuts = Number(inputTime.slice(0, 2))
     const seconds = Number(inputTime.slice(3))
     console.log(minuts, seconds);
 
@@ -110,7 +115,7 @@ function Counter() {
       Swal.fire("Los minutos y segundos no pueden ser mayores que 59.");
       return;
     }
-    
+
     setMinutos(minuts)
     setSegundos(seconds)
     setCentesimas(0)
@@ -146,7 +151,7 @@ function Counter() {
           </div>
 
           <button
-            onClick={()=>play(countDown)}
+            onClick={() => play(countDown)}
             className="stop"
             style={{ backgroundColor: playPause ? "red" : "green" }}
           >
@@ -166,7 +171,7 @@ function Counter() {
             onSubmit={onSubmit}
             className="countainer m-4 d-flex justify-content-center "
           >
-             <input
+            <input
               required
               onChange={onChange}
               value={inputTime}
