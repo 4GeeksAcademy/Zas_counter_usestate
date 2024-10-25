@@ -1,28 +1,39 @@
 body {
-  background-color: black;
+  background: linear-gradient(black, rgb(115, 115, 115));
+
+  
 }
 
 .wraper {
+  
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(black, rgb(115, 115, 115));
-  text-align: center;
+  
+text-align: center;
 }
+.caja{
+  background-color:rgba(0, 0, 0, 0.241);
+  
+  border-radius: 20px;
+  padding: 10px;
+}
+
 
 .titulo {
   color: rgb(255, 255, 255);
-  background: linear-gradient(to right, rgba(139, 79, 79, 0), black, rgba(0, 0, 0, 0));
+  background: linear-gradient(to right, rgb(88, 88, 88), black, rgb(91, 91, 91));
   width: 200;
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: lighter;
+  border-radius: 6px;
 }
 
 .chronos {
   display: flex;
-  font-size: 50px;
+  font-size: 55px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background: linear-gradient(
     rgb(188, 188, 188),
@@ -31,9 +42,9 @@ body {
     rgb(163, 163, 163)
   );
   color: rgb(0, 0, 0);
-  border-radius: 10px;
-  padding-inline: 20px;
-  box-shadow: 0px 7px 20px 1px;
+  border-radius: 2px;
+  padding-inline: 10px;
+  box-shadow: 0px 7px 10px 1px;
   margin: 30px;
 }
 
@@ -41,7 +52,7 @@ body {
   background-color: rgb(162, 162, 162);
   color: rgb(255, 255, 255);
   border-radius: 6px;
-  margin-left: 10px;
+  margin-left: 60px;
 }
 .reset:active {
   background-color: rgb(2, 0, 0);
@@ -52,6 +63,15 @@ body {
   color: rgb(255, 255, 255);
   border-radius: 6px;
 }
-.stop:active {
-  background-color: rgb(10, 47, 22);
+
+
+.setCountStart{
+  width: 70px;
+  margin-right: 15px;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
